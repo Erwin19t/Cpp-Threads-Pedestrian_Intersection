@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
     Pedestrian_Light P6(6, Initial_Pedestrians(6), false);
     Pedestrian_Light P7(7, Initial_Pedestrians(7), false);
     Pedestrian_Light P8(8, Initial_Pedestrians(8), false);
-
+    //Se crean los hilos necesarios
     thread V_L_Control(V_Lights_Control, &Av1, &Av2, &Av3, &Av4);
     thread P_L_Control(P_Lights_Control, &Av1, &Av2, &Av3, &Av4, &P1, &P2, &P3, &P4, &P5, &P6, &P7, &P8);
     thread V_Control(Vehicles_Control, &Av1, &Av2, &Av3, &Av4, &m1);
