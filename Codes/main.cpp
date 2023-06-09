@@ -137,7 +137,7 @@ void P_Lights_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
         }
     }
 }
-
+//Funcion para controlar los vehiculos
 void Vehicles_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3, Traffic_Light* Av4, mutex* m){
     while(1){
         sleep(1);
@@ -171,7 +171,7 @@ void Vehicles_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
         }
     }
 }
-
+//Funcion para controlar los peatones
 void Pedestrian_Control(Pedestrian_Light* P1, Pedestrian_Light* P2, Pedestrian_Light* P3, Pedestrian_Light* P4, Pedestrian_Light* P5, Pedestrian_Light* P6, Pedestrian_Light* P7, Pedestrian_Light* P8, mutex* m){
     while(1){
         if(P1 -> Get_State()){
