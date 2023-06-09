@@ -82,41 +82,25 @@ void V_Lights_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
     while(1){
         //Creamos una secuencia que seguiran los semaforos
         //Los semaforos va a ir cambiando de color en sentido horario
-        Av_State_01 = true;
-        Av_State_02 = false;
-        Av_State_03 = false;
-        Av_State_04 = false;
-        Av1 -> Set_State(Av_State_01);
-        Av2 -> Set_State(Av_State_02);
-        Av3 -> Set_State(Av_State_03);
-        Av4 -> Set_State(Av_State_04);
+        Av1 -> Set_State(Av_State_01 = true);
+        Av2 -> Set_State(Av_State_02 = false);
+        Av3 -> Set_State(Av_State_03 = false);
+        Av4 -> Set_State(Av_State_04 = false);
         sleep(5);
-        Av_State_01 = false;
-        Av_State_02 = true;
-        Av_State_03 = false;
-        Av_State_04 = false;
-        Av1 -> Set_State(Av_State_01);
-        Av2 -> Set_State(Av_State_02);
-        Av3 -> Set_State(Av_State_03);
-        Av4 -> Set_State(Av_State_04);
+        Av1 -> Set_State(Av_State_01 = false);
+        Av2 -> Set_State(Av_State_02 = true);
+        Av3 -> Set_State(Av_State_03 = false);
+        Av4 -> Set_State(Av_State_04 = false);
         sleep(5);
-        Av_State_01 = false;
-        Av_State_02 = false;
-        Av_State_03 = true;
-        Av_State_04 = false;
-        Av1 -> Set_State(Av_State_01);
-        Av2 -> Set_State(Av_State_02);
-        Av3 -> Set_State(Av_State_03);
-        Av4 -> Set_State(Av_State_04);
+        Av1 -> Set_State(Av_State_01 = false);
+        Av2 -> Set_State(Av_State_02 = false);
+        Av3 -> Set_State(Av_State_03 = true);
+        Av4 -> Set_State(Av_State_04 = false);
         sleep(5);
-        Av_State_01 = false;
-        Av_State_02 = false;
-        Av_State_03 = false;
-        Av_State_04 = true;
-        Av1 -> Set_State(Av_State_01);
-        Av2 -> Set_State(Av_State_02);
-        Av3 -> Set_State(Av_State_03);
-        Av4 -> Set_State(Av_State_04);
+        Av1 -> Set_State(Av_State_01 = false);
+        Av2 -> Set_State(Av_State_02 = false);
+        Av3 -> Set_State(Av_State_03 = false);
+        Av4 -> Set_State(Av_State_04 = true);
         sleep(5);
     }
 }
@@ -132,40 +116,24 @@ void P_Lights_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
     bool P_State_08 = false;
     while(1){
         if(((Av1 -> Get_State()) == true) || ((Av3 -> Get_State()) == true)){
-            P_State_01 = false;
-            P_State_02 = true;
-            P_State_03 = true;
-            P_State_04 = false;
-            P_State_05 = false;
-            P_State_06 = true;
-            P_State_07 = true;
-            P_State_08 = false;
-            P1 -> Set_State(P_State_01);
-            P2 -> Set_State(P_State_02);
-            P3 -> Set_State(P_State_03);
-            P4 -> Set_State(P_State_04);
-            P5 -> Set_State(P_State_05);
-            P6 -> Set_State(P_State_06);
-            P7 -> Set_State(P_State_07);
-            P8 -> Set_State(P_State_08);
+            P1 -> Set_State(P_State_01 = false);
+            P2 -> Set_State(P_State_02 = true);
+            P3 -> Set_State(P_State_03 = true);
+            P4 -> Set_State(P_State_04 = false);
+            P5 -> Set_State(P_State_05 = false);
+            P6 -> Set_State(P_State_06 = true);
+            P7 -> Set_State(P_State_07 = true);
+            P8 -> Set_State(P_State_08 = false);
         }
         if(((Av2 -> Get_State()) == true) || ((Av4 -> Get_State()) == true)){
-            P_State_01 = true;
-            P_State_02 = false;
-            P_State_03 = false;
-            P_State_04 = true;
-            P_State_05 = true;
-            P_State_06 = false;
-            P_State_07 = false;
-            P_State_08 = true;
-            P1 -> Set_State(P_State_01);
-            P2 -> Set_State(P_State_02);
-            P3 -> Set_State(P_State_03);
-            P4 -> Set_State(P_State_04);
-            P5 -> Set_State(P_State_05);
-            P6 -> Set_State(P_State_06);
-            P7 -> Set_State(P_State_07);
-            P8 -> Set_State(P_State_08);
+            P1 -> Set_State(P_State_01 = true);
+            P2 -> Set_State(P_State_02 = false);
+            P3 -> Set_State(P_State_03 = false);
+            P4 -> Set_State(P_State_04 = true);
+            P5 -> Set_State(P_State_05 = true);
+            P6 -> Set_State(P_State_06 = false);
+            P7 -> Set_State(P_State_07 = false);
+            P8 -> Set_State(P_State_08 = true);
         }
     }
 }
