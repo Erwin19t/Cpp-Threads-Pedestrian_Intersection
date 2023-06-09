@@ -115,7 +115,7 @@ void P_Lights_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
     bool P_State_07 = false;
     bool P_State_08 = false;
     while(1){
-        if(((Av1 -> Get_State()) == true) || ((Av3 -> Get_State()) == true)){
+        if( (Av1 -> Get_State()) || (Av3 -> Get_State()) ){
             P1 -> Set_State(P_State_01 = false);
             P2 -> Set_State(P_State_02 = true);
             P3 -> Set_State(P_State_03 = true);
@@ -125,7 +125,7 @@ void P_Lights_Control(Traffic_Light* Av1, Traffic_Light* Av2, Traffic_Light* Av3
             P7 -> Set_State(P_State_07 = true);
             P8 -> Set_State(P_State_08 = false);
         }
-        if(((Av2 -> Get_State()) == true) || ((Av4 -> Get_State()) == true)){
+        if( (Av2 -> Get_State()) || (Av4 -> Get_State()) ){
             P1 -> Set_State(P_State_01 = true);
             P2 -> Set_State(P_State_02 = false);
             P3 -> Set_State(P_State_03 = false);
